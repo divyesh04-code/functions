@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        /*
+        function myFunction() {
+            document.write("Welcome to Codeat Family","<br>");
+            document.write("We are learning functions","<br>");
+        }
+        myFunction();
+        myFunction();
+        */
+
+        /*
+        function myFunction1(msg, n) {
+            // parameter -> input
+            document.write(msg, n);
+        }
+        myFunction1("I am from Surat"," Udahna"); // argument
+        */
+
+        // Function-> 2 numbers, sum
+        /*
+        function sum(x, y){
+            document.write(x + y);
+        }
+        sum(25,30);
+        */
+
+        // using return keyword;
+        /*
+        function sum(x, y){
+            // Local variables -> scope
+            s = x + y;
+            document.write(x);
+            return s;
+        }
+        let val = sum(5, 10);
+        // console.log(x); // Undefined
+        document.write(val);
+        */
+
+
+        /* --- Arrow Function --- */
+
+        // sum function
+        /*
+        let arrowsum = (a, b) => {
+            document.write(a + b);
+        };
+        arrowsum(8, 9);
+        */
+
+        // using console.log
+        /*
+        let str = (x, y) => {
+            console.log(x + y);
+        }
+        */
+
+        // Multiplication function
+        // let mul = (m, n) => {
+        //     document.write(m * n);
+        // };
+        // mul(4, 6);
+
+        // using return function: 
+        /*
+        let mul = (m, n) => {
+            let resu = m * n;
+            return resu;
+        };
+        let val = mul(4, 6);
+        document.write(val);
+        */
+
+        // Single line Arrow function
+        // const printHello = () => console.log("hello");
+
+        /* ---Let's Practice--- */
+
+        // Qs 1. Create a function using the “function” keyword that takes a String as an argument & returns the number of vowels in the string.
+        /*
+        function countVowels(str){
+            let count = 0;
+            for (const char of str){
+                if(char === "a" || char === "e" || char === "i" || char === "o" || char === "u"){
+                    count++;
+                }
+            }
+            return count;
+        }
+        */
+
+        // Qs 2. Create an arrow function to perform the same task.
+        let countVowl = (str) => {
+            let count = 0;
+            for (const char of str){
+                if(char === "a" || char === "e" || char === "i" || char === "o" || char === "u"){
+                    count++;
+                }
+            }
+            return count;
+        }
+
+    </script>
+</body>
+</html>
