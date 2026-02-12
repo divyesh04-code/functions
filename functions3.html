@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expre & Arrow</title>
+</head>
+<body>
+    <script>
+        // function myfun(a,b){
+        //     document.write(15 + 5);
+        // }
+        // myfun();
+
+
+        // Function Expression
+        let sum = function(a, b){
+            return a + b;
+        }
+        let result = sum(5, 10);
+        document.write(result, "<br>");
+
+        // Arrow Functions
+        let add = (a, b) => {
+            document.write(a + b,"<br>");
+        };
+        add(20, 5);
+
+
+        function name(){
+            for (i = 1; i < 10; i++) {
+                if(i==4){
+                    document.write("At Surat","<br>");
+                    // break;
+                }
+                document.write("Codeat info","<br>");
+            }
+        }
+        name();
+
+
+    </script>
+</body>
+</html>
