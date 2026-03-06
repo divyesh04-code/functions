@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <script>
+        // Basic Example
+        /*
+        console.log("Start");
+        // let x=10;
+
+        try {
+            console.log(x);   // Error (x not defined)
+        } catch (error) {
+            console.log("Error aa gaya!");
+        }
+        console.log("End");
+        */
+
+        // ✅ Error Object
+        // try {
+        //     console.log(y);
+        // } catch (error) {
+        //     console.log(error);
+        // }
+
+        // Important Properties
+        /*
+        try {
+            console.log(y);
+        } catch (error) {
+            console.log(error.name);    // Error type
+            console.log(error.message); // Error message
+        }
+        */
+
+        // ✅ finally Block
+        // finally block हमेशा run होता है
+        // चाहे error आए या ना आए।
+        try {
+            console.log("Try block");
+        } catch (error) {
+            console.log("Catch block");
+        } finally {
+            console.log("Finally block");
+        }
+    </script>
+</body>
+</html>

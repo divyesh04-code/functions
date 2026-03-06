@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Cart List</h2>
+
+<ul id="cartList"></ul>
+
+<script>
+
+fetch("https://dummyjson.com/carts")
+.then(res => res.json())
+.then(data => {
+
+    console.log(data);
+
+    let carts = data.carts;
+    let list = document.getElementById("cartList");
+
+    carts.forEach(function(cart){
+
+        let li = document.createElement("li");
+
+        li.innerText = "Cart ID: " + cart.id + " | Total: $" + cart.total;
+
+        list.appendChild(li);
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

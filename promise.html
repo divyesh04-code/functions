@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        // Example 1: Basic Promise
+        /*
+        let myPromise = new Promise(function(resolve, reject) {
+            let success = true;
+            if(success){
+                resolve("data found");
+            }else{
+                reject("data not found");
+            }
+        });
+        myPromise
+        .then(function(result){
+            console.log(result);
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+        */
+
+        // Example 2
+        /*
+        let mydata = new Promise(function(resolve, reject){
+            let success = false;
+            if(success){
+                resolve("data found");
+            }
+            else{
+                reject("data not found");
+            }
+        });
+        mydata
+        .then(function(result){
+            console.log(result);
+        })
+        .catch(function(error){
+            console.log(error);
+        });
+        */
+
+        // Example 3: setTimeout के साथ (Asynchronous)
+        /*
+        let myPromise = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                resolve("data found");
+            }, 2000);
+        });
+        myPromise.then(function(data){
+            console.log(data);
+        });
+        */
+
+        // Example 4
+        /*
+        let info = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                resolve("found infomation");
+            }, 5000);
+        });
+        info.then(function(data){
+            console.log(data);
+        });
+        */
+
+        // Example 5: Reject Case
+        /*
+        let myinfo = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                reject("my info not found");
+            }, 2000);
+        });
+        myinfo.then(function(data){
+            console.log(data);
+        })
+        .catch(function(error){
+            console.log(error);
+        });
+        */
+
+        // Example 6: finally()
+        /*
+        let student = new Promise (function(resolve,reject){
+            setTimeout(function(){
+                resolve("come into school");
+            }, 2000);
+        })
+        student.then(function(data){
+            console.log(data);
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+        .finally(function(){
+            console.log("Process complete")
+        });
+        */
+
+        // Example 7: 
+        function loginUser(username, password){
+            return new Promise(function(resolve, reject){
+                if(username === "admin" && password === "1234"){
+                    resolve("Login Successful ✅");
+                } else {
+                    reject("Invalid Credentials ❌");
+                }
+            });
+        }
+
+        loginUser("admin", "1234")
+        .then(function(message){
+            console.log(message);
+        })
+        .catch(function(error){
+            console.log(error);
+        });
+    </script>
+</body>
+</html>

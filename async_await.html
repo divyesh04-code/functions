@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async_await</title>
+</head>
+<body>
+    <script>
+        /*
+        async function divu() {
+            let mumbaiWeather = new Promise( (resolve, reject) =>{
+                setTimeout (() => {
+                    resolve("22 deg")
+                }, 2000)
+            });
+
+            let dehliWeather = new Promise( (resolve, reject) =>{
+                setTimeout (() => {
+                    resolve("28 deg")
+                }, 5000)
+            });
+            // mumbaiWeather.then(alert);
+            // dehliWeather.then(alert);
+
+            console.log("Fetching Mumbai wether please wait...");
+            let mumbaiw = await mumbaiWeather;
+            console.log("Fetched Mumbai wether :" + mumbaiWeather);
+
+            console.log("Fetching delhi wether please wait...");
+            let delhiw = await dehliWeather;
+            console.log("Fetched delhi wether :" + dehliWeather);
+
+            return [delhiw,mumbaiw];
+        }
+
+        console.log("welcome to weather control room");
+        let a = divu();
+        console.log(a);
+        a.then((value) =>{
+            console.log(value);
+        })
+        */
+  
+        // Example 2
+        function loginUser(username, password){
+            return new Promise(function(resolve, reject){
+                if(username === "admin" && password === "1234"){
+                    resolve("Login Successful");
+                } else {
+                    reject("Invalid Credentials");
+                }
+            });
+        }
+
+        async function checkLogin() {
+            try {
+                let message = await loginUser("admin", "1234");
+                console.log(message);
+            } 
+            catch(error) {
+                console.log(error);
+            }
+        }
+
+        checkLogin();
+
+
+
+    </script>
+</body>
+</html>

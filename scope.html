@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        // let a = 10;
+        // // let a = 20; ❌ Error
+
+        // if (true) {
+        // let b = 50;
+        // }
+        // console.log(b); // ❌ Error (block scoped)
+
+        // ✅ const
+        // Block scoped
+        // Cannot reassign value
+        // const arr = [1, 2];
+        // // arr = [7,8]; // Error
+        // arr.push(3,4,5); // ✅ allowed
+        // console.log(arr);
+
+        // const user = {
+        // name: "Divyesh"
+        // };
+        // // user = { name: "Amit" }; // ❌ Error
+        // // Object.freeze(user); // we use Object.freeze() To Make Object Truly Constant
+        // user.name = "Rahul"; // ✅ allowed
+        // console.log(user);
+
+        a = "divyesh";
+        function hello(){
+            console.log(a);
+        }
+        hello();
+        console.log(a);
+
+
+    </script>
+</body>
+</html>

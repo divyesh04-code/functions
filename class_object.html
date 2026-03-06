@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <script>
+        // create object
+        /*
+        const student = {
+            name : "Vivek",
+            age : 28,
+        }
+        console.log(student.name);
+        console.log(student.age);
+        console.log(student);
+        */
+
+        // create class
+        /*
+        class student{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+            greet(){
+                console.log("Heloo my name is " + this.name);
+                console.log("and my age is " + this.age);
+            }
+        }
+        let s1 = new student("Jay", 20);
+        let s2 = new student("Hitesh", 35);
+        console.log(s1.name, s1.age);
+        s1.greet();
+        s2.greet();
+        */
+
+        //Example 3
+        /*
+        class smartPhone{
+            constructor(brand, model){
+                this.brand = brand;
+                this.model = model;
+            }
+            phone(){
+                console.log(this.brand + " provied best security");
+                console.log(this.model + " one year old model");
+            }
+            refubrised(){
+                console.log(this.brand + " best in brand");
+                console.log(this.model + " have 6 months warrnty left");
+            }
+        }
+        let m1 = new smartPhone("Apple", "Iphone16");
+        let m2 = new smartPhone("Motorola", "Moto13");
+        m1.phone();
+        console.log(m1.brand);
+        m2.refubrised();
+
+        */
+
+        //Example 4
+        class player{
+            constructor(batsman, bolwer, allRounder){
+                this.batsman = batsman;
+                this.bolwer = bolwer;
+                this.allRounder = allRounder;
+            }
+            india(){
+                console.log("Indian batsman " + this.batsman);
+                console.log("Indian bolwer " + this.bolwer);
+                console.log("Indian All-rounder " + this.allRounder);
+            }
+        }
+        let b1 = new player("Dhoni", "Munaf", "Jadeja");
+        let b2 = new player("Sachin", "Srinath", "Kapil");
+        b1.india();
+        b2.india();
+        console.log(b1.batsman);
+        console.log(b2.batsman, b2.bolwer);
+
+
+        
+    </script>
+</body>
+</html>

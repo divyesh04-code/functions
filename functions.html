@@ -98,6 +98,7 @@
         */
 
         // Qs 2. Create an arrow function to perform the same task.
+        /*
         let countVowl = (str) => {
             let count = 0;
             for (const char of str){
@@ -107,6 +108,17 @@
             }
             return count;
         }
+        */
+
+        const person = {
+            name: "Divyesh",
+            greet: function() {
+                setTimeout(() => {
+                    console.log(this.name);
+                }, 1000);
+            }
+        }
+        person.greet();
 
     </script>
 </body>

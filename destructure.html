@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object and Array Destructure</title>
+</head>
+<body>
+    <script>
+        // Object Destructuring
+        /*
+        let student ={
+            name : "Vivek",
+            age : 20,
+            city : "ukai"
+        }
+        let {name, age} = student;
+        console.log(name, age);
+        // Rename Variables
+        let {name: studentName, age: studentAge} = student;
+        console.log(studentName, studentAge);
+
+        // Array Destructuring:
+        let names = ["Divyesh", "Vivek", "Pavan"];
+        let[a, b, c] = names;
+        console.log(a, b);
+        console.log(a, c);
+
+        // Swap Two Variables
+        let x = 10;
+        let y = 20;
+        [x,y] = [y,x];
+        console.log(x, y);
+        */
+
+        // 1️⃣ Rest Operator in Array Destructuring
+        let numbers = [10, 20, 30, 40, 50];
+        // let [a, b, ...rest] = numbers;
+
+        // console.log(a);    // 10
+        // console.log(b);    // 20
+        // console.log(rest); // [30, 40, 50]
+
+        // 2️⃣ Rest Operator in Function Parameters
+        function sum(...numbers) {
+            let total = 0;
+
+            for(let num of numbers) {
+                total += num;
+            }
+
+            return total;
+        }
+
+        console.log(sum(10, 20, 30));      // 60
+        console.log(sum(5, 15, 25, 35));   // 80
+
+        // 3️⃣ Rest Operator in Object Destructuring
+        let student = {
+            name: "Divyesh",
+            age: 22,
+            city: "Surat",
+            country: "India"
+        };
+
+        let { name, ...rest} = student;
+
+        console.log(name);  // Divyesh
+        console.log(rest);  // { age: 22, city: "Surat", country: "India" }
+    </script>
+</body>
+</html>

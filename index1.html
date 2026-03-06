@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="todoInput">
+    <button id="addBtn">Add Todo</button>
+</body>
+</html>
+<!-- <table border="1">
+<thead>
+<tr>
+<th>ID</th>
+<th>Task</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody id="tableBody"></tbody> -->
+
+
+<script>
+    /*
+    fetch("https://dummyjson.com/todos")
+    .then(res => res.json())
+    .then(data => {
+
+        let todos = data.todos;
+        let tableBody = document.getElementById("tableBody");
+
+        todos.forEach(function(todo){
+
+            let row = `
+            <tr>
+                <td>${todo.id}</td>
+                <td>${todo.todo}</td>
+                <td>${todo.completed}</td>
+            </tr>
+            `;
+
+            tableBody.innerHTML += row;
+
+        });
+
+    });
+    */
+
+    // Example 2: Add Todo(POST)
+    /*
+   fetch("https://dummyjson.com/todos/add", {
+    method: "POST",
+    headers: {
+    "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+    todo: "Learn JavaScript Fetch",
+    completed: false,
+    userId: 1
+    })
+    })
+    .then(res => res.json())
+    .then(data => console.log(data));
+    */
+
+    // 13. Real Project Example
+    let addBtn = document.getElementById("addBtn");
+
+    addBtn.onclick = function(){
+
+    fetch("https://dummyjson.com/todos/add",{
+    method:"POST",
+    headers:{
+    "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+    todo:"Learn Fetch API",
+    completed:false,
+    userId:1
+    })
+    })
+    .then(res=>res.json())
+    .then(data=>{
+    console.log(data);
+    });
+
+    }
+</script>
